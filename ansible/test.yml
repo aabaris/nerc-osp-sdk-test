@@ -1,6 +1,6 @@
 - hosts: localhost
   tasks:
-    - name: Gather information 
+    - name: Gather server information 
       openstack.cloud.server_info:
         name: aa*
         filters:
@@ -9,3 +9,9 @@
     - name: debug
       debug:
         msg: "{{ my_servers }}"
+    - name: Gather flaovr information 
+      openstack.cloud.compute_flavor_info:
+      register: my_flavors
+    - name: debug
+      debug:
+        msg: "{{ my_flavors }}"

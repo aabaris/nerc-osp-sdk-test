@@ -1,2 +1,2 @@
 cd container
-podman build . -t ansible-test
+podman build . -t ansible-test-aa
