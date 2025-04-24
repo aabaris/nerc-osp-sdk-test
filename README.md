@@ -1,4 +1,4 @@
-# nerc-osp-sd-test
+# nerc-osp-sdk-test
 
 ## build container
 ```
