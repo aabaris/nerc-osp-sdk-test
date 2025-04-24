@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: Gather information 
+      openstack.cloud.server_info:
+        name: aa*
+        filters:
+          vm_state: active
+      register: my_servers
+    - name: debug
+      debug:
+        msg: "{{ my_servers }}"
